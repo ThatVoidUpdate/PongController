@@ -14,14 +14,13 @@ void setup() {
 }
 
 void loop() {
-  if(Serial.available() > 0){
-    Serial.read();
     State = 0;
     State += digitalRead(UpPin) * 8;
     State += digitalRead(DownPin) * 4;
     State += digitalRead(LeftPin) * 2;
     State += digitalRead(RightPin) * 1;
-    Serial.println(State);
-  }
+    Serial.print(State);
+    Serial.println(";");
+    delay(10);
 
 }
