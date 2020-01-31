@@ -34,17 +34,23 @@ public class Arduino : MonoBehaviour
             upPressed = false;
             downPressed = false;
             leftPressed = false;
-            rightPressed = false;
+            rightPressed = false;            
 
             foreach (string value in serial.ReadExisting().Split(';'))
             {
                 if (value.Trim() != "")
                 {
+                    state = value.Trim();
                     StateInt = Convert.ToInt32(value.Trim());
-                    upPressed = (StateInt & (1 << 4 - 1)) == 0;
-                    downPressed = (StateInt & (1 << 3 - 1)) == 0;
-                    leftPressed = (StateInt & (1 << 2 - 1)) == 0;
-                    rightPressed = (StateInt & (1 << 1 - 1)) == 0;
+                    upPressed = (StateInt & (1 << 4 - 1)) != 0;
+                    downPressed = (StateInt & (1 << 3 - 1)) != 0;
+                    leftPressed = (StateInt & (1 << 2 - 1)) != 0;
+                    rightPressed = (StateInt & (1 << 1 - 1)) != 0;
+
+                    if (upPressed)
+                    {
+                        Debug.Log("Up is pressed");
+                    }
                 }
             }
 
