@@ -281,6 +281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6732a16381c71d43a288db619a02ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftScoreText: {fileID: 705692255}
+  RightScoreText: {fileID: 286660433}
 --- !u!4 &207210595
 Transform:
   m_ObjectHideFlags: 0
@@ -574,6 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff69b27e26600d4ea0779f2f3dda46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 207210594}
 --- !u!1 &245484306
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +776,7 @@ GameObject:
   - component: {fileID: 286660434}
   - component: {fileID: 286660433}
   m_Layer: 5
-  m_Name: LeftScore
+  m_Name: RightScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1121,7 +1124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackingObject: {fileID: 225712076}
-  Speed: 0.5
+  Speed: 0
 --- !u!1 &516857628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,7 +1216,7 @@ GameObject:
   - component: {fileID: 705692256}
   - component: {fileID: 705692255}
   m_Layer: 5
-  m_Name: RightScore
+  m_Name: LeftScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

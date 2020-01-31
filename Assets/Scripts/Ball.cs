@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private Rigidbody2D rb;
+    public LevelManager manager;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +20,13 @@ public class Ball : MonoBehaviour
         if (transform.position.x < -10)
         {
             //left player dropped the ball
+            manager.DoRightScore();
             Reset();
         }
         else if (transform.position.x > 10)
         {
             //right player dropped the ball
+            manager.DoLeftScore();
             Reset();
         }
     }
