@@ -17,6 +17,6 @@ public class AIPaddle : MonoBehaviour
     {
         Vector3 MoveDirection = TrackingObject.transform.position - transform.position;
         float Movement = (MoveDirection.normalized * Speed).y;
-        transform.position = transform.position + new Vector3(0, Movement, 0);
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y + Movement, -3.9f, 3.9f), transform.position.z);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DDRManager : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class DDRManager : MonoBehaviour
 
     public float Score;
     public Canvas canvas;
+
+    public TextMeshProUGUI ScoreText;
+
+    public float ScoreDecay;
+
+    public AIPaddle PlayerPaddle;
 
     [Space]
     public GameObject UpArrow;
@@ -30,7 +37,18 @@ public class DDRManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Score -= Score > 0 ? 0.05f : 0;
+        if (Score - ScoreDecay <= 0)
+        {
+            Score = 0;
+        }
+        else
+        {
+            Score -= ScoreDecay;
+        }
+
+        ScoreText.text = "Score: " + System.Math.Round(Score, 2);
+
+        PlayerPaddle.Speed = Score/5;
     }
 
     IEnumerator SpawnDDR()

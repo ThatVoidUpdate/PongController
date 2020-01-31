@@ -38,7 +38,7 @@ public class DDRArrow : MonoBehaviour
                 if (controller.upPressed)
                 {
                     float Distance = Mathf.Abs(CorrectHitPosition - transform.position.y);
-                    manager.Score += 10 / Distance;
+                    manager.Score += Mathf.Clamp(-Distance + 10, 0, 10);
                     Destroy(gameObject);
                 }
                 break;
@@ -46,7 +46,7 @@ public class DDRArrow : MonoBehaviour
                 if (controller.downPressed)
                 {
                     float Distance = Mathf.Abs(CorrectHitPosition - transform.position.y);
-                    manager.Score += 10 / Distance;
+                    manager.Score += Mathf.Clamp(-Distance + 10, 0, 10);
                     Destroy(gameObject);
                 }
                 break;
@@ -54,7 +54,7 @@ public class DDRArrow : MonoBehaviour
                 if (controller.leftPressed)
                 {
                     float Distance = Mathf.Abs(CorrectHitPosition - transform.position.y);
-                    manager.Score += 10 / Distance;
+                    manager.Score += Mathf.Clamp(-Distance + 10, 0, 10);
                     Destroy(gameObject);
                 }
                 break;
@@ -62,7 +62,7 @@ public class DDRArrow : MonoBehaviour
                 if (controller.rightPressed)
                 {
                     float Distance = Mathf.Abs(CorrectHitPosition - transform.position.y);
-                    manager.Score += 10 / Distance;
+                    manager.Score += Mathf.Clamp(-Distance + 10, 0, 10);
                     Destroy(gameObject);
                 }
                 break;
