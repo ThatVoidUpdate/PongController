@@ -19,16 +19,18 @@ public class Ball : MonoBehaviour
         if (transform.position.x < -10)
         {
             //left player dropped the ball
+            Reset();
         }
         else if (transform.position.x > 10)
         {
             //right player dropped the ball
+            Reset();
         }
     }
 
     public void Reset()
     {
         transform.position = Vector3.zero;
-        rb.velocity = new Vector2(Random.Range(-5f, 5f), Random.Range(-5f, 5f));
+        rb.velocity = new Vector2(Random.Range(-1f, 1f) > 0 ? 5 : -5, Random.Range(-5f, 5f));
     }
 }
