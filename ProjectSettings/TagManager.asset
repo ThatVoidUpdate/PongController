@@ -7,6 +7,10 @@ TagManager:
   - LevelManager
   - DDRManager
   - ArduinoManager
+  - Up
+  - Down
+  - Left
+  - Right
   layers:
   - Default
   - TransparentFX

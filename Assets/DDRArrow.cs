@@ -20,6 +20,7 @@ public class DDRArrow : MonoBehaviour
     {
         controller = GameObject.FindGameObjectWithTag("ArduinoManager").GetComponent<Arduino>();
         manager = GameObject.FindGameObjectWithTag("DDRManager").GetComponent<DDRManager>();
+        print(gameObject.name + " " + transform.position);
     }
 
     // Update is called once per frame

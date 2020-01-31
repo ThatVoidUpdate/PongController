@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8639237628209725606}
   m_Layer: 5
   m_Name: LeftImage
-  m_TagString: Untagged
+  m_TagString: Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 975799348915456242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -88,6 +88,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 2
-  CorrectHitPosition: 167
-  speed: 3
-  DestroyPosition: 50
+  CorrectHitPosition: -2.2
+  speed: 0.1
+  DestroyPosition: -4.19
