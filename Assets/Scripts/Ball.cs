@@ -29,6 +29,14 @@ public class Ball : MonoBehaviour
             manager.DoLeftScore();
             Reset();
         }
+        else if (transform.position.y > 6)
+        {
+            Reset();
+        }
+        else if (transform.position.y < -6)
+        {
+            Reset();
+        }
     }
 
     public void Reset()

@@ -5,7 +5,8 @@ using TMPro;
 
 public class DDRManager : MonoBehaviour
 {
-    public float DDRDelay;
+    private float DDRDelay;
+    public float bpm;
 
     public float Score;
     public Canvas canvas;
@@ -31,6 +32,7 @@ public class DDRManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DDRDelay = 60 / bpm;
         StartCoroutine(SpawnDDR());
     }
 

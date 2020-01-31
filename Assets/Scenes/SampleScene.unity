@@ -353,7 +353,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.4854455
 --- !u!212 &225712079
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -390,7 +390,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f3cdff22e0436204794fd431c1ad0b4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -411,7 +411,7 @@ Transform:
   m_GameObject: {fileID: 225712076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -863,8 +863,8 @@ GameObject:
   m_Component:
   - component: {fileID: 459417183}
   - component: {fileID: 459417182}
-  - component: {fileID: 459417184}
   - component: {fileID: 459417185}
+  - component: {fileID: 459417184}
   m_Layer: 0
   m_Name: LeftPaddle
   m_TagString: Untagged
@@ -909,7 +909,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3e07ef3e385b33e4fb2509c9558729e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4374eee80320dc46acdd89e90a72a02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -928,14 +928,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459417181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.5, y: -3.89, z: 0}
-  m_LocalScale: {x: 0.2, y: 1, z: 1}
+  m_LocalPosition: {x: -8.515, y: -3.38, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &459417184
-BoxCollider2D:
+--- !u!68 &459417184
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -943,23 +943,18 @@ BoxCollider2D:
   m_GameObject: {fileID: 459417181}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 86c68cb2f28051a4bbbbafe1bd684d78, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
-    newSize: {x: 1.6, y: 1.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.6, y: 1.6}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.45872116, y: 2.4396834}
+  - {x: 0.45533752, y: 2.448759}
+  - {x: 0.3036232, y: 0.1281004}
+  - {x: 0.45967484, y: -2.4647388}
+  - {x: -0.46397972, y: -2.4553223}
 --- !u!114 &459417185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1221,8 +1216,8 @@ GameObject:
   m_Component:
   - component: {fileID: 765265492}
   - component: {fileID: 765265491}
-  - component: {fileID: 765265493}
   - component: {fileID: 765265494}
+  - component: {fileID: 765265493}
   m_Layer: 0
   m_Name: RightPaddle
   m_TagString: Untagged
@@ -1267,7 +1262,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3e07ef3e385b33e4fb2509c9558729e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e4374eee80320dc46acdd89e90a72a02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1287,13 +1282,13 @@ Transform:
   m_GameObject: {fileID: 765265490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &765265493
-BoxCollider2D:
+--- !u!68 &765265493
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1301,23 +1296,18 @@ BoxCollider2D:
   m_GameObject: {fileID: 765265490}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 86c68cb2f28051a4bbbbafe1bd684d78, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
-    newSize: {x: 1.6, y: 1.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.6, y: 1.6}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.43675613, y: -2.441213}
+  - {x: -0.46606064, y: -2.474149}
+  - {x: -0.24609375, y: -0.010332108}
+  - {x: -0.47812653, y: 2.467678}
+  - {x: 0.45609474, y: 2.4751189}
 --- !u!114 &765265494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1581,11 +1571,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 17b9ba3d14907ae4780537429a945f1f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 52468316b9fd836458ecfbc2d76cd978, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1784,7 +1774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09adfe8305fcb3c46ac1ca26f17304c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DDRDelay: 0.46153846
+  bpm: 128
   Score: 0
   canvas: {fileID: 1502058185}
   ScoreText: {fileID: 1689848126}
@@ -2089,8 +2079,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1703625448
-BoxCollider2D:
+--- !u!60 &1703625448
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2098,7 +2088,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1703625447}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 86c68cb2f28051a4bbbbafe1bd684d78, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2112,9 +2102,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.6, y: 1.6}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.00010482222, y: 0.3117703}
+      - {x: -0.8, y: 0.8}
+      - {x: -0.8, y: -0.8}
+      - {x: 0.8, y: -0.8}
+      - {x: 0.8, y: 0.8}
 --- !u!212 &1703625449
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2412,8 +2406,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &2053196568
-BoxCollider2D:
+--- !u!60 &2053196568
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2421,7 +2415,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2053196567}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 86c68cb2f28051a4bbbbafe1bd684d78, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2435,9 +2429,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.6, y: 1.6}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.8, y: 0.8}
+      - {x: -0.8, y: -0.8}
+      - {x: -0.00013137229, y: -0.32153237}
+      - {x: 0.8, y: -0.8}
+      - {x: 0.8, y: 0.8}
 --- !u!212 &2053196569
 SpriteRenderer:
   m_ObjectHideFlags: 0
