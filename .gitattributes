@@ -1,0 +1,8 @@
+# Ignore git files, readme and doc media
+.gitattributes export-ignore
+.gitignore export-ignore
+README.md export-ignore linguist-documentation
+/GH_Media export-ignore
+
+#Tell the linguist that files in buils were generated automatically, and should be ignored
+Builks/* linguist-generated
