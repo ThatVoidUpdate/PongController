@@ -4,5 +4,8 @@
 README.md export-ignore linguist-documentation
 /GH_Media export-ignore
 
-#Tell the linguist that files in buils were generated automatically, and should be ignored
+#Tell the linguist that files in builks were generated automatically, and should be ignored
 Builks/* linguist-generated
+
+#Tell the linguist to ignore everything in Assets/TextMesh Pro
+"Assets/TextMesh Pro/*" linguist-vendored
